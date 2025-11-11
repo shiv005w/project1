@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: linear-gradient(to right, #1f4037, #99f2c8);
+ 
+  min-height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #333;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #0a74da;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #0a74da;
+}
+
+main {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cards-container,
+.models-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.car-card,
+.model-card {
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0a74da;
+  overflow: hidden;
+  color: white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  
+  
+}
+
+.car-card:hover,
+.model-card:hover {
+    margin: 10px;
+   
+  transform: scale(1.05);
+}
+
+.car-card img,
+.model-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.car-card h2,
+.model-card h2 {
+  margin: 15px 0 10px;
+  color: #0a74da;
+}
+
+.car-card p,
+.model-card p {
+  font-size: 0.95rem;
+  padding: 0 15px 15px;
+  color: #ccc;
+}
+
+form {
+  max-width: 500px;
+  background-color: #222;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0a74da;
+  margin: auto;
+  color: #eee;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #0a74da;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #085bb5;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #555;
+  font-size: 0.9rem;
+  background: #111;
+  margin-top: 40px;
+}
