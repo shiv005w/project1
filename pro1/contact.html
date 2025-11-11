@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BMW Clone - Contact</title>
+  <title>Contact - BMW Clone</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="site">
   <nav>
     <div class="logo">BMW Clone</div>
     <ul>
@@ -15,20 +15,18 @@
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
-
   <main>
     <h1>Contact Us</h1>
-    <form class="contact">
-      <label>Name:</label><br />
-      <input type="text" name="name" required /><br /><br />
-      <label>Email:</label><br />
-      <input type="email" name="email" required /><br /><br />
-      <label>Message:</label><br />
-      <textarea name="message" rows="5" required></textarea><br /><br />
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </main>
-
   <footer>
     &copy; 2025 BMW Clone
   </footer>
