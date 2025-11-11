@@ -1,153 +1,15 @@
- body {
-      min-height: 100vh;
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab, #25b09b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .glass-container {
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(12px);
-      border-radius: 16px;
-      border: 1.5px solid rgba(255,255,255,0.15);
-      width: 350px;
-      padding: 40px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .glass-container h2 {
-      color: #25b09b;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .glass-container input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      background: rgba(255,255,255,0.25);
-      font-size: 1rem;
-    }
-    .glass-container button {
-      width: 100%;
-      padding: 13px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #25b09b 40%, #928dab 100%);
-      color: white;
-      font-size: 1.15rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 8px;
-      transition: background 0.3s;
-    }
-    .glass-container button:hover {
-      background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
-    }
-    .glass-container .footer-link {
-      color: #25b09b;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      margin-top: 15px;
-      transition: color 0.2s;
-      text-align: center;
-      display: block;
-    }
-    .glass-container .footer-link:hover {
-      color: #928dab;
-    }
-
-
-    body {
-      min-height: 100vh;
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab, #25b09b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .glass-container {
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(12px);
-      border-radius: 16px;
-      border: 1.5px solid rgba(255,255,255,0.15);
-      width: 350px;
-      padding: 40px 32px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .glass-container h2 {
-      color: #25b09b;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .glass-container input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      background: rgba(255,255,255,0.25);
-      font-size: 1rem;
-    }
-    .glass-container button {
-      width: 100%;
-      padding: 13px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #25b09b 40%, #928dab 100%);
-      color: white;
-      font-size: 1.15rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 8px;
-      transition: 0.3s;
-    }
-    .glass-container button:hover {
-      background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
-    }
-    .glass-container .footer-link {
-      color: #25b09b;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      margin-top: 15px;
-      transition: color 0.2s;
-      text-align: center;
-      display: block;
-    }
-    .glass-container .footer-link:hover {
-      color: #928dab;
-    }
-
-
-
+/* ========== GLOBAL RESET AND BASE STYLES ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-body {
+/* ========== INDEX.HTML & MAIN SITE PAGES ========== */
+/* Index, features, contact, etc. */
+body.site {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: linear-gradient(to right, #1f4037, #99f2c8);
- 
+  background: linear-gradient(to right, #1f4037, #99f2c8);
   min-height: 100vh;
 }
 
@@ -196,11 +58,12 @@ main {
   margin: auto;
 }
 
+/* Card Grid and Cards for car/gallery pages */
 .cards-container,
 .models-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+  gap: 40px; /* Increased spacing between cards */
 }
 
 .car-card,
@@ -213,14 +76,10 @@ main {
   transition: transform 0.3s ease;
   cursor: pointer;
   text-align: center;
-  
-  
 }
 
 .car-card:hover,
 .model-card:hover {
-    margin: 10px;
-   
   transform: scale(1.05);
 }
 
@@ -244,7 +103,8 @@ main {
   color: #ccc;
 }
 
-form {
+/* Form styles used on contact page */
+form.site-form {
   max-width: 500px;
   background-color: #222;
   padding: 25px;
@@ -254,12 +114,13 @@ form {
   color: #eee;
 }
 
-label {
+/* Input styles for site forms */
+.site-form label {
   font-weight: 600;
 }
 
-input,
-textarea {
+.site-form input,
+.site-form textarea {
   width: 100%;
   padding: 8px;
   margin-top: 8px;
@@ -268,7 +129,7 @@ textarea {
   font-size: 1rem;
 }
 
-button {
+.site-form button {
   background-color: #0a74da;
   color: white;
   padding: 12px 25px;
@@ -281,7 +142,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.site-form button:hover {
   background-color: #085bb5;
 }
 
@@ -293,3 +154,82 @@ footer {
   background: #111;
   margin-top: 40px;
 }
+
+/* ========== LOGIN & SIGNUP PAGES ========== */
+/* Page body uses .auth for these pages */
+body.auth {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab, #25b09b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  width: 350px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glass-container h2 {
+  color: #25b09b;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.glass-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.25);
+  font-size: 1rem;
+}
+
+.glass-container button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #25b09b 40%, #928dab 100%);
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.glass-container button:hover {
+  background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
+}
+
+.glass-container .footer-link {
+  color: #25b09b;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: color 0.2s;
+  text-align: center;
+  display: block;
+}
+
+.glass-container .footer-link:hover {
+  color: #928dab;
+}
+
+/* ========== END OF CSS ========== */
