@@ -1,11 +1,149 @@
-/* Reset */
+ body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab, #25b09b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .glass-container {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      width: 350px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .glass-container h2 {
+      color: #25b09b;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .glass-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255,255,255,0.25);
+      font-size: 1rem;
+    }
+    .glass-container button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #25b09b 40%, #928dab 100%);
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: background 0.3s;
+    }
+    .glass-container button:hover {
+      background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
+    }
+    .glass-container .footer-link {
+      color: #25b09b;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 15px;
+      transition: color 0.2s;
+      text-align: center;
+      display: block;
+    }
+    .glass-container .footer-link:hover {
+      color: #928dab;
+    }
+
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab, #25b09b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .glass-container {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      width: 350px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .glass-container h2 {
+      color: #25b09b;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .glass-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255,255,255,0.25);
+      font-size: 1rem;
+    }
+    .glass-container button {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #25b09b 40%, #928dab 100%);
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: 0.3s;
+    }
+    .glass-container button:hover {
+      background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
+    }
+    .glass-container .footer-link {
+      color: #25b09b;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 15px;
+      transition: color 0.2s;
+      text-align: center;
+      display: block;
+    }
+    .glass-container .footer-link:hover {
+      color: #928dab;
+    }
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic styling */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: linear-gradient(to right, #1f4037, #99f2c8);
