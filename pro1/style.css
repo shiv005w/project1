@@ -1,164 +1,153 @@
-/* ========== GLOBAL RESET AND BASE STYLES ========== */
-* {
+/* Reset some base styles */
+body, h1, h2, p, ul {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* ========== INDEX.HTML & MAIN SITE PAGES ========== */
-/* Index, features, contact, etc. */
-body.site {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #1f4037, #99f2c8);
-  min-height: 100vh;
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #222;
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(to right, #1f4037, #99f2c8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #333;
-  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  background: #14151a;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(40,40,70,0.04);
 }
 
-nav .logo {
-  font-weight: bold;
-  font-size: 1.8rem;
-  color: #0a74da;
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 1.5rem;
 }
 
 nav ul li a {
-  color: #eee;
+  color: #e0e0e0;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: #0a74da;
+nav ul li a.active,
+nav ul li a:hover {
+  background: #2233ac;
+  color: #fff;
 }
 
 main {
-  padding: 100px 20px 40px;
   max-width: 1200px;
-  margin: auto;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 0 1.5rem;
 }
 
-/* Card Grid and Cards for car/gallery pages */
-.cards-container,
-.models-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* was 240px, now 340px */
-  gap: 40px;
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: #16235b;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
 
-.car-card,
-.model-card {
-  background: linear-gradient(to right, #1f4037, #99f2c8);
-  border-radius: 15px;
-  box-shadow: 0 0 20px #0a74da;
-  overflow: hidden;
-  color: white;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+.car-card {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(30,40,90,0.07);
+  border-radius: 0.9rem;
+  width: 260px;
+  padding: 1rem 1.25rem 1.3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.car-card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 8px 25px rgba(57,80,185,0.12);
+}
+
+.car-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(55, 75, 155, 0.09);
+}
+
+.car-card h2 {
+  margin-bottom: 0.5rem;
+  color: #273377;
+  font-size: 1.25rem;
+  font-weight: 700;
   text-align: center;
 }
 
-.car-card:hover,
-.model-card:hover {
-  transform: scale(1.05);
-}
-
-.car-card img,
-.model-card img {
-  width: 100%;
-  height: 180px; /* You can increase this too if you want more vertical space */
-  object-fit: cover;
-  display: block;
-}
-
-
-.car-card h2,
-.model-card h2 {
-  margin: 15px 0 10px;
-  color: #0a74da;
-}
-
-.car-card p,
-.model-card p {
-  font-size: 0.95rem;
-  padding: 0 15px 15px;
-  color: #ccc;
-}
-
-/* Form styles used on contact page */
-form.site-form {
-  max-width: 500px;
-  background-color: #222;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #0a74da;
-  margin: auto;
-  color: #eee;
-}
-
-/* Input styles for site forms */
-.site-form label {
-  font-weight: 600;
-}
-
-.site-form input,
-.site-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 8px;
-  border-radius: 8px;
-  border: none;
+.car-card p {
   font-size: 1rem;
-}
-
-.site-form button {
-  background-color: #0a74da;
-  color: white;
-  padding: 12px 25px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.site-form button:hover {
-  background-color: #085bb5;
+  color: #444a5a;
+  text-align: center;
 }
 
 footer {
+  background: #14151a;
+  color: #fff;
   text-align: center;
-  padding: 20px 0;
-  color: #555;
-  font-size: 0.9rem;
-  background: #111;
-  margin-top: 40px;
+  padding: 1rem 0;
+  font-size: 1rem;
+  border-top: 1.5px solid #222944;
+  margin-top: 2rem;
 }
 
-/* ========== LOGIN & SIGNUP PAGES ========== */
+/* Responsive Design */
+@media (max-width: 900px) {
+  .cards-container {
+    gap: 1.2rem;
+  }
+  .car-card {
+    width: 45vw;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .cards-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .car-card {
+    width: 95vw;
+    max-width: 340px;
+  }
+  main {
+    padding: 0 0.2rem;
+  }
+}/* ========== LOGIN & SIGNUP PAGES ========== */
 /* Page body uses .auth for these pages */
 body.auth {
   min-height: 100vh;
@@ -289,6 +278,17 @@ body.auth {
 .contact-form button:hover {
   background: linear-gradient(90deg, #928dab 0%, #25b09b 100%);
 }
+/* Form styles used on contact page */
+form.site-form {
+  max-width: 500px;
+  background-color: #222;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #0a74da;
+  margin: auto;
+  color: #eee;
+}
 
 
 /* ========== END OF CSS ========== */
+
