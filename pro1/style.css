@@ -38,10 +38,7 @@ nav ul li a {
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   border-radius: 2px;
-  transition: background 0.2s, color 0.2s;
-}
-
-nav ul li a.active,
+  transition: background 0.2s, color 0.2s;     
 nav ul li a:hover {
   background: #2233ac;
   color: #fff;
